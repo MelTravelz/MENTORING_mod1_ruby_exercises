@@ -22,17 +22,17 @@ RSpec.describe Centaur do
     expect(centaur.run).to eq('Clop clop clop clop!')
   end
 
-  xit 'when first created, it is not cranky' do
+  it 'when first created, it is not cranky' do
     centaur = Centaur.new('George', 'Palomino')
     expect(centaur.cranky?).to be false
   end
 
-  xit 'when first created, it is standing up' do
+  it 'when first created, it is standing up' do
     centaur = Centaur.new('George', 'Palomino')
     expect(centaur.standing?).to be true
   end
 
-  xit 'gets tired after running or shooting a bow thrice' do
+  it 'gets tired after running or shooting a bow thrice' do
     centaur = Centaur.new('George', 'Palomino')
     expect(centaur.cranky?).to be false
 
@@ -43,7 +43,7 @@ RSpec.describe Centaur do
     expect(centaur.cranky?).to be true
   end
 
-  xit 'will not shoot a bow when cranky' do
+  it 'will not shoot a bow when cranky' do
     centaur = Centaur.new('George', 'Palomino')
 
     expect(centaur.cranky?).to be false
@@ -53,13 +53,13 @@ RSpec.describe Centaur do
     expect(centaur.shoot).to eq('NO!')
   end
 
-  xit 'will not sleep when it is standing' do
+  it 'will not sleep when it is standing' do
     centaur = Centaur.new('George', 'Palomino')
 
     expect(centaur.sleep).to eq('NO!')
   end
 
-  xit 'is not standing after laying down' do
+  it 'is not standing after laying down' do
     centaur = Centaur.new('George', 'Palomino')
     centaur.lay_down
 
