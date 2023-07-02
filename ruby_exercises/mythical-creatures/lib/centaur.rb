@@ -39,7 +39,11 @@ class Centaur
   end
 
   def sleep
-    "NO!" if @standing == true
+    if @standing == true
+      "NO!" 
+    else
+      @endurance = 3
+    end
   end
 
   def lay_down
@@ -53,5 +57,13 @@ class Centaur
 
   def stand_up
     @standing = true
+  end
+
+  def drink_potion
+    if @standing == true && @endurance >= 1 
+      "Pukes in Centaur"
+    elsif @standing == true
+      @endurance = 3 
+    end
   end
 end
