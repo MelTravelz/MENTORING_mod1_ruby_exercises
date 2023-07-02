@@ -1,6 +1,7 @@
 require 'rspec'
 require './lib/medusa'
 
+# Medusa is a Gorgon!
 RSpec.describe Medusa do
   it 'has a name' do
     medusa = Medusa.new('Cassiopeia')
