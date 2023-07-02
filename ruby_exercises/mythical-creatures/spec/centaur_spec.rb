@@ -67,25 +67,25 @@ RSpec.describe Centaur do
     expect(centaur.laying?).to be true
   end
 
-  xit 'can sleep when laying down' do
+  it 'can sleep when laying down' do
     centaur = Centaur.new('George', 'Palomino')
     centaur.lay_down
     expect(centaur.sleep).to_not eq('NO!')
   end
 
-  xit 'cannot shoot a bow when laying down' do
+  it 'cannot shoot a bow when laying down' do
     centaur = Centaur.new('George', 'Palomino')
     centaur.lay_down
     expect(centaur.shoot).to eq('NO!')
   end
 
-  xit 'cannot run while laying down' do
+  it 'cannot run while laying down' do
     centaur = Centaur.new('George', 'Palomino')
     centaur.lay_down
     expect(centaur.run).to eq('NO!')
   end
 
-  xit 'can stand up' do
+  it 'can stand up' do
     centaur = Centaur.new('George', 'Palomino')
     centaur.lay_down
     centaur.stand_up

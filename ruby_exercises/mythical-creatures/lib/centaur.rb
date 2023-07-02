@@ -10,7 +10,7 @@ class Centaur
   end
 
   def shoot
-    if cranky? == false
+    if cranky? == false && @standing == true
       @endurance -= 1
       "Twang!!!"
     else
@@ -19,8 +19,12 @@ class Centaur
   end
 
   def run
-    @endurance -= 1
-    "Clop clop clop clop!"
+    if @standing == true
+      @endurance -= 1
+      "Clop clop clop clop!"
+    else 
+      "NO!"
+    end
   end
 
   def cranky?
@@ -35,7 +39,7 @@ class Centaur
   end
 
   def sleep
-    "NO!"
+    "NO!" if @standing == true
   end
 
   def lay_down
@@ -45,5 +49,9 @@ class Centaur
   def laying? 
     # @standing == false
     !@standing
+  end
+
+  def stand_up
+    @standing = true
   end
 end
