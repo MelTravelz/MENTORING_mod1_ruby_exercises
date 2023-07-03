@@ -22,18 +22,11 @@ class Potluck
     # dish_by_category
 
     # OPTION 2
-    # dish_by_category = @dishes.map do |dish|
-    #   if dish.category == category_name
-    #     dish
-    #   end
-    # end
-
-    # OPTION 3
     # @dishes.select do |dish|
     #   dish.category == category_name
     # end
 
-    # OPTION 4
+    # OPTION 3
     @dishes.find_all do |dish|
       dish.category == category_name
     end
@@ -56,15 +49,15 @@ class Potluck
     # OPTION 2
     app_array = get_all_from_category(:appetizer).map do |dish|
       dish.name
-    end
+    end.sort
 
     entr_array = get_all_from_category(:entre).map do |dish|
       dish.name
-    end
+    end.sort
 
     dess_array = get_all_from_category(:dessert).map do |dish|
       dish.name
-    end
+    end.sort
 
     { 
       appetizers: app_array,

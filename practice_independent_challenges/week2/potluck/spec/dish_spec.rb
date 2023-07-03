@@ -1,7 +1,10 @@
 require 'rspec'
 require './lib/dish'
+# only require the classes that you are making an instance of
 
 RSpec.describe Dish do 
+  # Iteration 1
+
   # before(:each) do
     # @dish = Dish.new("Couscous Salad", :appetizer)
   # end
