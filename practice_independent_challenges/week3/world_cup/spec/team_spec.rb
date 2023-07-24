@@ -12,6 +12,10 @@ RSpec.describe Team do
 
   it "checks if team has been eliminated" do
     expect(team.eliminated?).to eq(false)
+
+    team.eliminated = true
+
+    expect(team.eliminated?).to eq(true)
   end
 
 
