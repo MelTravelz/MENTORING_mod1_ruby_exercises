@@ -25,4 +25,16 @@ RSpec.describe WorldCup do
     expect(world_cup.year).to eq(2018)
     expect(world_cup.teams).to eq([france, croatia])
   end
+
+  it "returns all active players by position" do
+    france.add_player(mbappe)
+    france.add_player(pogba)
+    croatia.add_player(modric)
+    croatia.add_player(vida)
+
+    expect(world_cup.active_players_by_position("midfielder")).to eq([pogba, modric])
+
+    # for more robust testing, consider adding what it will NOT equal:
+    # expect(world_cup.active_players_by_position("midfielder")).to_not eq([vida, mbappe])
+  end
 end

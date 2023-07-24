@@ -19,7 +19,7 @@ class Team
   end
 
   def players_by_position(position)
-    #.find_all returns ALL that return true in the code block
+    #.find_all returns ALL of the objects that return true in the code block -> so it'll return any player that meets the criteria
     #.find_all also ALWAYS returns an ARRAY / .select will return the collection type it's iterating over!!
     @players.find_all do |player|
       player.position == position
