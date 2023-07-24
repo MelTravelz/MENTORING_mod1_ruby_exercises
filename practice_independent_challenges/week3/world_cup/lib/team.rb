@@ -17,4 +17,12 @@ class Team
     # alternative:
     # @players << player
   end
+
+  def players_by_position(position)
+    #.find_all returns ALL that return true in the code block
+    #.find_all also ALWAYS returns an ARRAY / .select will return the collection type it's iterating over!!
+    @players.find_all do |player|
+      player.position == position
+    end
+  end
 end

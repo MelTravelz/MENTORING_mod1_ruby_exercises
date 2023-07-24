@@ -25,11 +25,19 @@ RSpec.describe Team do
   it "can add players to a team" do
     # optional since we already tested this
     # could use here to prove the two players were not part of the team to start
-    # expect(team.players).to eq([])
+    expect(team.players).to eq([])
 
     team.add_player(mbappe)
     team.add_player(pogba) 
 
     expect(team.players).to eq([mbappe, pogba])
+  end
+
+  it "can return players based on their position" do
+    team.add_player(mbappe)
+    team.add_player(pogba) 
+
+    expect(team.players_by_position("midfielder")).to eq([pogba])
+    expect(team.players_by_position("defender")).to eq([])
   end
 end
