@@ -5,7 +5,7 @@ RSpec.describe Team do
   let(:team) { Team.new("France") }
 
   let(:mbappe) { Player.new({name: "Kylian Mbappe", position: "forward"}) }
-  let(:pogba) { Player.new({name: "Paul Pogba", position: "midfielder"})   }
+  let(:pogba) { Player.new({name: "Paul Pogba", position: "midfielder"}) }
 
   it "exsists & had attributes" do
     expect(team).to be_a(Team)
