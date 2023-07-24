@@ -36,5 +36,9 @@ RSpec.describe WorldCup do
 
     # for more robust testing, consider adding what it will NOT equal:
     # expect(world_cup.active_players_by_position("midfielder")).to_not eq([vida, mbappe])
+
+    croatia.eliminated = true
+
+    expect(world_cup.active_players_by_position("midfielder")).to eq([pogba])
   end
 end
