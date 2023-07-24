@@ -8,6 +8,7 @@ RSpec.describe Team do
     expect(team).to be_a(Team)
     expect(team.country).to eq("France")
     expect(team.eliminated).to eq(false)
+    expect(team.players).to eq([])
   end
 
   it "checks if team has been eliminated" do
@@ -17,6 +18,4 @@ RSpec.describe Team do
 
     expect(team.eliminated?).to eq(true)
   end
-
-
 end
