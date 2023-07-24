@@ -11,4 +11,10 @@ class Team
   def eliminated?
     @eliminated
   end
+
+  def add_player(player)
+    @players.push(player)
+    # alternative:
+    # @players << player
+  end
 end
