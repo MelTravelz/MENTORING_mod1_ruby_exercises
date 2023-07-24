@@ -1,0 +1,13 @@
+require "./lib/player"
+
+RSpec.describe Player do
+  let(:player) { Player.new({name: "Luka Modric", position: "midfielder"}) }
+  
+  describe "#initialize" do
+    it "exsists & has attributes" do
+      expect(player).to be_a(Player)
+      expect(player.name).to eq("Luka Modric")
+      expect(player.position).to eq("midfielder")
+    end
+  end
+end
