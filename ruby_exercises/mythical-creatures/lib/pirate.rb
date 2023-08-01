@@ -1,12 +1,15 @@
 class Pirate
-  attr_reader :name, :job, :booty
+  attr_reader :name, 
+              :job, 
+              :booty
 
   def initialize(name, job = "Scallywag") #job is now an 'optional argument'
     @name = name
     @job = job
-    @cursed = false #the pirates is NOT cursed by default
     @heinous_act_counter = 0
     @booty = 0
+    
+    @cursed = false #the pirates is NOT cursed by default
     # This does not allow us to change the default value:
     # @job = "Scallywag"
   end
