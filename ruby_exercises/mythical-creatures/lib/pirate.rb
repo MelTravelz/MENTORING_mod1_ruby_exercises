@@ -18,8 +18,7 @@ class Pirate
 
   def commit_heinous_act
     @heinous_act_counter += 1
-    if @heinous_act_counter >= 3
-      @cursed = true
-    end
+    @cursed = true if @heinous_act_counter >= 3
+    #this works, however, there is no way for the pirate to become UNcursed!
   end
 end
