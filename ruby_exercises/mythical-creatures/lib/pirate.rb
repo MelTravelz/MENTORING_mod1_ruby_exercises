@@ -5,7 +5,7 @@ class Pirate
     @name = name
     @job = job
     @cursed = false #the pirates is NOT cursed by default
-
+    @heinous_act_counter = 0
     # This does not allow us to change the default value:
     # @job = "Scallywag"
   end
@@ -17,6 +17,9 @@ class Pirate
   #the attribute @cursed is then NOT called outside the method, so we do NOT put it in the attr_reader
 
   def commit_heinous_act
-
+    @heinous_act_counter += 1
+    if @heinous_act_counter >= 3
+      @cursed = true
+    end
   end
 end
