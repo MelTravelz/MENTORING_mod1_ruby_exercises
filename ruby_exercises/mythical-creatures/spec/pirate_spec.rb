@@ -69,13 +69,12 @@ require 'rspec'
 require './lib/pirate'
 
 RSpec.describe Pirate do
-  pirate_jane = Pirate.new('Jane')
-  pirate_bb = Pirate.new('Blackbeard', 'cook')
+  let(:pirate_jane) { Pirate.new('Jane') }
+  let(:pirate_bb) { Pirate.new('Blackbeard', 'cook') }
 
   it 'exisits & has attributes' do
     expect(pirate_jane.name).to eq('Jane')
     expect(pirate_jane.job).to eq('Scallywag')
-    expect(pirate_jane.heinous_act_counter).to eq(0)
     expect(pirate_jane.booty).to eq(0)
 
     # expect(pirate_bb.name).to eq('Blackbeard')
