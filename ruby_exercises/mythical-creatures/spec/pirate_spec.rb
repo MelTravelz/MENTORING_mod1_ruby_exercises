@@ -7,17 +7,17 @@ RSpec.describe Pirate do
     expect(pirate.name).to eq('Jane')
   end
 
-  xit 'can have a different name' do
+  it 'can have a different name' do
     pirate = Pirate.new('Blackbeard')
     expect(pirate.name).to eq('Blackbeard')
   end
 
-  xit 'is a scallywag by default' do
+  it 'is a scallywag by default' do
     pirate = Pirate.new('Jane')
     expect(pirate.job).to eq('Scallywag')
   end
 
-  xit 'is not always a scallywag' do
+  it 'is not always a scallywag' do
     pirate = Pirate.new('Jack', 'cook')
     expect(pirate.job).to eq('cook')
   end
