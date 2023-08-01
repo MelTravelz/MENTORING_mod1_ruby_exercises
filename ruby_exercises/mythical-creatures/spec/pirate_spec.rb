@@ -45,10 +45,23 @@ RSpec.describe Pirate do
     expect(pirate.booty).to eq(0)
   end
 
-  xit 'gets 100 booty for robbing a ship' do
+  it 'gets 100 booty for robbing a ship' do
     # create a pirate
+    pirate = Pirate.new('Jack')
+
     # rob some ships
+    pirate.commit_heinous_act
     # check that the pirate got 100 booty for each ship it robbed
+    expect(pirate.booty).to eq(100)
+
+    pirate.commit_heinous_act
+    expect(pirate.booty).to eq(200)
+
+    pirate.commit_heinous_act
+    expect(pirate.booty).to eq(300)
+    
+    pirate.commit_heinous_act
+    expect(pirate.booty).to eq(400)
   end
 
 end

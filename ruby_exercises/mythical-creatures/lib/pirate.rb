@@ -18,6 +18,7 @@ class Pirate
   #the attribute @cursed is then NOT called outside the method, so we do NOT put it in the attr_reader
 
   def commit_heinous_act
+    @booty += 100
     @heinous_act_counter += 1
     @cursed = true if @heinous_act_counter >= 3
     #this works, however, there is no way for the pirate to become UNcursed!
