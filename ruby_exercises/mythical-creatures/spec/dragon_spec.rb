@@ -17,22 +17,22 @@ RSpec.describe Dragon do
     expect(dragon.color).to eq(:gold)
   end
 
-  xit 'is a different dragon' do
+  it 'is a different dragon' do
     dragon = Dragon.new('Mnementh', :bronze, 'Flar')
     expect(dragon.name).to eq('Mnementh')
   end
 
-  xit 'has a different rider' do
+  it 'has a different rider' do
     dragon = Dragon.new('Mnementh', :bronze, 'Flar')
     expect(dragon.rider).to eq('Flar')
   end
 
-  xit 'has a different color' do
+  it 'has a different color' do
     dragon = Dragon.new('Mnementh', :bronze, 'Flar')
     expect(dragon.color).to eq(:bronze)
   end
 
-  xit 'was born hungry' do
+  it 'was born hungry' do
     dragon = Dragon.new('Mnementh', :bronze, 'Flar')
     expect(dragon.hungry?).to be true
   end
