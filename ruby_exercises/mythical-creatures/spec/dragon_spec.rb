@@ -37,7 +37,7 @@ RSpec.describe Dragon do
     expect(dragon.hungry?).to be true
   end
 
-  xit 'eats a lot' do
+  it 'eats a lot' do
     dragon = Dragon.new('Mnementh', :bronze, 'Flar')
     expect(dragon.hungry?).to be true
     dragon.eat
