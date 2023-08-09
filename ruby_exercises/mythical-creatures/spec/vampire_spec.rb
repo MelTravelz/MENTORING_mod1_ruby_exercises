@@ -28,7 +28,7 @@ RSpec.describe Vampire do
     expect(vampire.thirsty).to be true
   end
 
-  xit 'is not thirsty after drinking' do
+  it 'is not thirsty after drinking' do
     vampire = Vampire.new('Elizabeth Bathory')
 
     vampire.drink
