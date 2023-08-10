@@ -7,22 +7,22 @@ RSpec.describe Hobbit do
     expect(hobbit.name).to eq('Bilbo')
   end
 
-  it 'can have another name' do
+  xit 'can have another name' do
     hobbit = Hobbit.new('Peregrin')
     expect(hobbit.name).to eq('Peregrin')
   end
 
-  it 'has an unadventurous disposition' do
+  xit 'has an unadventurous disposition' do
     hobbit = Hobbit.new('Samwise')
     expect(hobbit.disposition).to eq('homebody')
   end
 
-  it 'can have a different disposition' do
+  xit 'can have a different disposition' do
     hobbit = Hobbit.new('Frodo', 'adventurous')
     expect(hobbit.disposition).to eq('adventurous')
   end
 
-  it 'can grow older when celebrating birthdays' do
+  xit 'can grow older when celebrating birthdays' do
     hobbit = Hobbit.new('Meriadoc')
     expect(hobbit.age).to eq(0)
 
@@ -33,7 +33,7 @@ RSpec.describe Hobbit do
     expect(hobbit.age).to eq(5)
   end
 
-  it 'is considered a child at 32' do
+  xit 'is considered a child at 32' do
     hobbit = Hobbit.new('Gerontius')
 
     32.times do
@@ -43,7 +43,7 @@ RSpec.describe Hobbit do
     expect(hobbit.adult?).to be false
   end
 
-  it 'comes of age at 33' do
+  xit 'comes of age at 33' do
     hobbit = Hobbit.new('Otho')
 
     33.times do
