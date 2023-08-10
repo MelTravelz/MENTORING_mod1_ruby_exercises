@@ -85,8 +85,11 @@ RSpec.describe Hobbit do
     expect(sam.has_ring?).to be false
   end
 
-  xit 'they are short' do
+  it 'they are short' do
     # create a hobbit
+    frodo = Hobbit.new('Frodo')
+
     # check that is_short? returns true
+    expect(frodo.short?).to be true
   end
 end

@@ -7,6 +7,7 @@ class Hobbit
     @name = name
     @disposition = disposition
     @age = 0
+    @short = true
   end
 
   def celebrate_birthday
@@ -34,5 +35,9 @@ class Hobbit
     else
       false
     end
+  end
+
+  def short?
+    @short
   end
 end
