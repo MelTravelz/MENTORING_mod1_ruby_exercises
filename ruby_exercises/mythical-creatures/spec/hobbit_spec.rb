@@ -7,17 +7,17 @@ RSpec.describe Hobbit do
     expect(hobbit.name).to eq('Bilbo')
   end
 
-  xit 'can have another name' do
+  it 'can have another name' do
     hobbit = Hobbit.new('Peregrin')
     expect(hobbit.name).to eq('Peregrin')
   end
 
-  xit 'has an unadventurous disposition' do
+  it 'has an unadventurous disposition' do
     hobbit = Hobbit.new('Samwise')
     expect(hobbit.disposition).to eq('homebody')
   end
 
-  xit 'can have a different disposition' do
+  it 'can have a different disposition' do
     hobbit = Hobbit.new('Frodo', 'adventurous')
     expect(hobbit.disposition).to eq('adventurous')
   end
