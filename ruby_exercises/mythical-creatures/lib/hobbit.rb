@@ -7,7 +7,6 @@ class Hobbit
     @name = name
     @disposition = disposition
     @age = 0
-    # @adult = false
   end
 
   def celebrate_birthday
@@ -20,8 +19,12 @@ class Hobbit
     # else 
     #   false
     # end
-    
+
     #This is a ternary operator:
     @age >= 33 ? true : false
+  end
+
+  def old?
+    @age >= 101 ? true : false
   end
 end
