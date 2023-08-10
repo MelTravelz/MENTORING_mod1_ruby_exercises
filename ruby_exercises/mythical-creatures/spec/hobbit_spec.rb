@@ -33,7 +33,7 @@ RSpec.describe Hobbit do
     expect(hobbit.age).to eq(5)
   end
 
-  xit 'is considered a child at 32' do
+  it 'is considered a child at 32' do
     hobbit = Hobbit.new('Gerontius')
 
     32.times do
@@ -43,7 +43,7 @@ RSpec.describe Hobbit do
     expect(hobbit.adult?).to be false
   end
 
-  xit 'comes of age at 33' do
+  it 'comes of age at 33' do
     hobbit = Hobbit.new('Otho')
 
     33.times do
