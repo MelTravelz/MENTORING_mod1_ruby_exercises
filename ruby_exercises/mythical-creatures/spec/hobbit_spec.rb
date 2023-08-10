@@ -22,7 +22,7 @@ RSpec.describe Hobbit do
     expect(hobbit.disposition).to eq('adventurous')
   end
 
-  xit 'can grow older when celebrating birthdays' do
+  it 'can grow older when celebrating birthdays' do
     hobbit = Hobbit.new('Meriadoc')
     expect(hobbit.age).to eq(0)
 
