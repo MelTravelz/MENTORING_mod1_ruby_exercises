@@ -11,4 +11,12 @@ class Wizard
   def bearded?
     @bearded
   end
+
+  def incantation(words)
+    #Option 1: String Concatenation
+    "sudo " + words
+
+    #Option 2: String Interpolation 
+    # "sudo #{words}" 
+  end
 end
