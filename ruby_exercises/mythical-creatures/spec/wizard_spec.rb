@@ -12,7 +12,7 @@ RSpec.describe Wizard do
     expect(wizard.name).to eq('Alex')
   end
 
-  xit 'is bearded by default' do
+  it 'is bearded by default' do
     wizard = Wizard.new('Ben')
     expect(wizard.bearded?).to be true
   end
