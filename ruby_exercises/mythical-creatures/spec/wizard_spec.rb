@@ -28,14 +28,17 @@ RSpec.describe Wizard do
     expect(wizard.incantation('chown ~/bin')).to eq('sudo chown ~/bin')
   end
 
-  xit 'has many root powers' do
+  it 'has many root powers' do
     wizard = Wizard.new('Sal', bearded: true)
     expect(wizard.incantation('rm -rf /home/mirandax')).to eq('sudo rm -rf /home/mirandax')
   end
 
-  xit 'starts rested' do
+  it 'starts rested' do
     # create wizard
+    wizard = Wizard.new('Wes', bearded: true)
+    
     # .rested? returns true
+    expect(wizard.rested?).to be(true)
   end
 
   xit 'can cast spells' do
