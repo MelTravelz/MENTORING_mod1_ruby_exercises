@@ -21,7 +21,12 @@ class Wizard
     # "sudo #{words}" 
   end
 
+  #see how this type of method only calls on an attribute that is NOT accessable outside the class
   def rested?
     @rested
+  end
+
+  def cast
+    "MAGIC MISSILE!"
   end
 end
