@@ -18,6 +18,7 @@ RSpec.describe Wizard do
   end
 
   it 'is not always bearded' do
+    #notice how we are now technicall passing through a HASH as an argument!!
     wizard = Wizard.new('Valerie', bearded: false)
     expect(wizard.bearded?).to be false
   end
@@ -34,19 +35,37 @@ RSpec.describe Wizard do
 
   it 'starts rested' do
     # create wizard
+    wizard = Wizard.new('Wes', bearded: true)
+
     # .rested? returns true
+    expect(wizard.rested?).to be(true)
+
+    #these are essentially the same test:
+    # expect(wizard.rested?).to eq(true)
   end
 
   it 'can cast spells' do
     # create wizard
+    wizard = Wizard.new('Wes', bearded: true)
+
     # .cast returns "MAGIC MISSILE!"
+    expect(wizard.cast).to eq("MAGIC MISSILE!")
   end
 
   it 'gets tired after casting three spells' do
     # create wizard
+    wizard = Wizard.new('Wes', bearded: true)
+
     # casts spell twice
+    2.times { wizard.cast }
+
     # check if wizard is rested
+    expect(wizard.rested?).to eq(true)
+    
     # casts spell
+    wizard.cast
+
     # check wizard is not rested
+    expect(wizard.rested?).to eq(false)
   end
 end
